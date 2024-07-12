@@ -68,12 +68,12 @@ setSelectedCustomerTransactions(transactionsProccess.filter(proccess => proccess
       <td className="border border-slate-700 rounded-md font-bold">{customer.id}</td>
       <td className="border border-slate-700 rounded-md">{customer.name}</td>
     
-    <td className='border border-slate-700 rounded-md '> { customerTransations.filter(proccess => proccess.customer_id.toString() === customer.id.toString()).map(proccess =>   <p key={proccess.id} className="border w-max border-slate-700 rounded-md">
+    <td className='border border-slate-700 rounded-md '> { customerTransations.filter(proccess => proccess.customer_id.toString() === customer.id.toString()).map(proccess =>   <p key={proccess.id} className=" w-max md:w-full m-auto border-b border-slate-700 ">
         {proccess.date}
      </p>
 
           )}</td>
-    <td className='border border-slate-700 rounded-md'> { customerTransations.filter(proccess => proccess.customer_id.toString() === customer.id.toString()).map(proccess =>   <p key={proccess.id} className="border border-slate-700 rounded-md">
+    <td className='border border-slate-700 rounded-md'> { customerTransations.filter(proccess => proccess.customer_id.toString() === customer.id.toString()).map(proccess =>   <p key={proccess.id} className=" border-b border-slate-700">
         {proccess.amount}
      </p>
 
