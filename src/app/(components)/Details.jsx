@@ -52,14 +52,14 @@ setSelectedCustomerTransactions(transactionsProccess.filter(proccess => proccess
     </div>
     
    
-<div className="table overflow-x-auto w-full">
+<div className="overflow-x-scroll  w-full">
 <table className="border-separate  border-spacing-2 border rounded-md bg-slate-600  border-slate-500 text-center p-3 w-full">
   <thead className=' text-red-400 text-2xl' >
     
     <tr>
       <th className="border border-slate-600 ">Customer Id</th>
       <th className="border border-slate-600 ">Name</th>
-      <th className="border border-slate-600 ">Date</th>
+      <th className="border border-slate-600  ">Date</th>
       <th className="border border-slate-600 ">Amount</th>
     </tr>
   </thead>
@@ -68,7 +68,7 @@ setSelectedCustomerTransactions(transactionsProccess.filter(proccess => proccess
       <td className="border border-slate-700 rounded-md font-bold">{customer.id}</td>
       <td className="border border-slate-700 rounded-md">{customer.name}</td>
     
-    <td className='border border-slate-700 rounded-md'> { customerTransations.filter(proccess => proccess.customer_id.toString() === customer.id.toString()).map(proccess =>   <p key={proccess.id} className="border border-slate-700 rounded-md">
+    <td className='border border-slate-700 rounded-md '> { customerTransations.filter(proccess => proccess.customer_id.toString() === customer.id.toString()).map(proccess =>   <p key={proccess.id} className="border w-max border-slate-700 rounded-md">
         {proccess.date}
      </p>
 
